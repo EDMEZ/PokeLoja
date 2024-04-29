@@ -171,3 +171,32 @@ main .PrincipalContent .PageNumbers h2{
     width: 75%;
     
 }
+
+.AsideMain .ContainerAside .ContainerFormCadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    height: 20%;
+}
+.AsideMain .ContainerAside .ContainerFormCadastro .Formcadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe9e9;
+    padding: 30px;
+    gap:20px;
+}
+.AsideMain .ContainerAside .ContainerFormCadastro .Formcadastro a{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(2, 173, 253);
+    text-decoration: none;
+    color: white;
+}
+.AsideMain .ContainerAside .ContainerFormCadastro .Formcadastro h3,.Formcadastro p{
+    margin: 0;
+}
+.Formcadastro input{
+    height: 30px;
+    width: 210px;    
+    outline:none;
+}
