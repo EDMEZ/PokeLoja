@@ -7,3 +7,8 @@
 - [ ] Responsividade
 - [ ] Funcionamento do site
 - [ ] Site estar no ar
+
+### Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), o site no momento esta funcionando apenas na maquina local.
+para ser possível acessar-lo será necessário instalar a pasta inteira.
