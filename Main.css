@@ -51,6 +51,23 @@ header .inputgroup input{
     height: 100%;
 }
 /* NavHeader */
+nav{
+    background-color: black;
+    display: flex;
+}
+nav .main-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+nav .main-nav .navcontent{
+    display: flex;
+    color: white;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 10px;
+}
 
 
 /* main */
