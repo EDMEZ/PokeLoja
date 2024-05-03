@@ -21,4 +21,7 @@ no futuro irei criar versões diferentes usando o  @media para ser mais funciona
 Possivelmente o layout principal será alterado no futuro, usando display grid para posicionar todo
 o layout do site. Alterar medidas de tamanho para imagens e os cards ficarem responsivos
 
+### Atualizações
+uma nova versão do site esta sendo produzida em outra branch,dessa vez com mais recursos e adaptações
+como o uso de API, Pseudoclasses, @media e o uso de grid nos elementos da main
  
