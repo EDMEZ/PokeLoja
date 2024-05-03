@@ -5,6 +5,7 @@ body,html{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #d3d3d3;
 }
 .container{
     display: flex;
@@ -13,7 +14,7 @@ body,html{
     justify-content: space-between;
 }
 
-/* HEADER */
+/* HEADER ----------------------------------- */
 
 header{
     width: 100%;
@@ -50,7 +51,7 @@ header .inputgroup input{
     outline:none;
     height: 100%;
 }
-/* NavHeader */
+/* NavHeader -------------------------------------------- */
 nav{
     background-color: black;
     display: flex;
@@ -70,7 +71,22 @@ nav .main-nav .navcontent{
 }
 
 
-/* main */
+/* main-------------------------------------------- */
+
+main{
+    width: 75%;
+    display: flex;
+    background-color: white;
+}
+/* main .maincontent{
+    
+} */
+
+/* Aside -------------------------------------  */
+aside{
+    width:25%;
+    background-color: white;
+}
 
 /*
 aside .poke-ads{
