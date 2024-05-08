@@ -75,12 +75,20 @@ nav .main-nav .navcontent{
 
 main{
     width: 75%;
-    display: flex;
     background-color: white;
 }
-/* main .maincontent{
-    
-} */
+main .maincontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 385px 385px 385px;
+}
+main .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Aside -------------------------------------  */
 aside{
