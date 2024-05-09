@@ -7,6 +7,9 @@ body,html{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d3d3d3;
 }
+body{
+    width: 100%;
+}
 .container{
     display: flex;
     width: 1200px;
@@ -80,15 +83,50 @@ main{
 main .maincontent{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 385px 385px 385px;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: 20px;
 }
 main .cards{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid #d3d3d3;
+}
+main .cards:hover{
+    background-color: #d3d3d3;
+    transition: 5s;
+}
+main .cards .CardButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0px;
+    margin-bottom:10px;
+    width: 90%;
+    border-radius: 10px;
+background: linear-gradient(-45deg,#23a6d5,#23d5ab);
+}
+main .cards:hover .CardButton{
+    animation: BotaoCard 5s ease infinite;
+    background: linear-gradient(-45deg,#ee7252,#e73c7e,#23a6d5,#23d5ab) no-repeat;
+    background-size: 400% 400%;
+    animation-fill-mode: forwards;
 }
 
+main .cards .CardButton a{
+    text-decoration: none;
+    color: White;
+    font-weight: 600;
+}
+main .cards .CardButton img{
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+}
 
 /* Aside -------------------------------------  */
 aside{
@@ -117,4 +155,18 @@ aside .poke-ads{
      left: 0;
  } */
 
- 
+@keyframes BotaoCard{
+   0%{
+    background-position: 0% 50%;
+   }
+   50%{
+    background-position: 100% 50%;
+   }
+   100%{
+    background-position: 0% 50%;
+   }
+
+    /* background: linear-gradient(-45deg,#23a6d5,#ee7252,#e73c7e,#23d5ab) */
+   
+  
+} 
