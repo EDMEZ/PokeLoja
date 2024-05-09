@@ -98,6 +98,16 @@ main .cards:hover{
     background-color: #d3d3d3;
     transition: 5s;
 }
+main .cards .PriceFrom{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+main .cards .PriceTo{
+    color: limegreen;
+    font-weight: 600;
+    font-size: 18px;
+}
 main .cards .CardButton{
     width: 100%;
     display: flex;
