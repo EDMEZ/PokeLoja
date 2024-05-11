@@ -5,7 +5,7 @@ body,html{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #d3d3d3;
+    background-color: white;
 }
 body{
     width: 100%;
@@ -70,9 +70,15 @@ nav .main-nav .navcontent{
     color: white;
     align-items: center;
     text-transform: uppercase;
+    justify-content: center;
     gap: 10px;
 }
-
+nav .main-nav .navcontent h5::after{
+    content: "ㅤ|";
+}
+#nobefore::after{
+display: none;
+}
 
 /* main-------------------------------------------- */
 
@@ -121,7 +127,7 @@ main .cards .CardButton{
     margin-bottom:10px;
     width: 90%;
     border-radius: 10px;
-background: linear-gradient(-45deg,#23a6d5,#23d5ab);
+    background: linear-gradient(-45deg,#23a6d5,#23d5ab);
 }
 main .cards:hover .CardButton{
     animation: BotaoCard 5s ease infinite;
@@ -142,11 +148,11 @@ main .cards .CardButton img{
 }
 
 /* Aside -------------------------------------  */
+
 aside{
     width:25%;
     background-color: white;
 }
-
 
 aside .poke-ads{
     display: block;
@@ -190,6 +196,13 @@ aside .poke-ads{
      align-items: flex-end;
  }
 
+footer {
+    background-color: #000000;
+}
+
+
+/* KEYFRAMES ------------------------------- */
+
 @keyframes BotaoCard{
    0%{
     background-position: 0% 50%;
@@ -199,9 +212,188 @@ aside .poke-ads{
    }
    100%{
     background-position: 0% 50%;
-   }
+   }  
+}
 
-    /* background: linear-gradient(-45deg,#23a6d5,#ee7252,#e73c7e,#23d5ab) */
-   
-  
-} 
+/* 
+BREAKPOINTS:
+320px — 480px: dispositivos móveis
+481px — 768px: iPads, tablets
+769px — 1024px: telas pequenas, laptops
+1025px — 1200px: desktops, telas grandes
+1201px e acima —  telas muito grandes, TVs */
+
+/* @media -------------------------------------------------------  */
+
+@media (min-width:320px){
+    .container{
+        width: 100%; 
+        flex-direction: column;  
+    }
+    header .main-header{
+        font-size: 12px;
+        gap: 0px 20px;
+        justify-content: space-evenly;
+    }
+    nav .main-nav{
+        font-size:13px;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 5px;
+        justify-content: space-evenly;
+    }
+
+    main .maincontent{
+        grid-template-columns: 1fr;
+    }
+    main{
+        width: 100%;
+    }
+    main .maincontent :nth-child(n+5){
+        display: none;
+    }
+    main .CardButton{
+        display: flex !important;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    aside{
+        display: flex;
+        width: 100%;
+    }
+    aside .main-aside{
+        width: 100%;
+    }
+    aside .poke-ads{
+        display: block;
+        background-image: url(IMG/Mewto.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+
+}
+
+@media (min-width:481px){
+    .container{
+        width: 100%; 
+        flex-direction: column;  
+    }
+    
+    header .main-header{
+        font-size: 12px;
+        gap: 0px 20px;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    nav .main-nav{
+        font-size:15px;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 5px;
+        justify-content: space-evenly;
+    }
+    main .maincontent{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:769px){
+    .container{
+        width: 769px; 
+        flex-direction: row;  
+    }
+    
+    header .main-header{
+        font-size: 16px;
+        gap: 0px 20px;
+        justify-content: space-between;
+    }
+    nav .main-nav{
+        font-size:18px;
+        flex-wrap: nowrap;
+        padding: 5px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    main .maincontent{
+        grid-template-columns: 1fr 1fr ;
+    }
+    main .maincontent :nth-child(n+3){
+        display: flex;
+    }
+    main .maincontent :nth-child(n+7){
+        display: none;
+    }
+    main{
+        width: 65%;
+    }
+    aside{
+        width: 35%;
+        display: block;
+    }
+    aside .poke-ads .imgtext p{
+        color: white;
+        z-index: 1;
+        text-align: center;
+     }
+}
+@media (min-width:1025px){
+    .container{
+        width: 1025px; 
+        flex-direction: row;  
+    }
+    
+    header .main-header{
+        font-size: 16px;
+        gap: 0px 20px;
+        justify-content: space-between;
+    }
+    nav .main-nav{
+        font-size:18px;
+        flex-wrap: nowrap;
+        padding: 5px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    main .maincontent{
+        grid-template-columns: 1fr 1fr 1fr  ;
+    }
+    main .maincontent :nth-child(n+1){
+        display: flex;
+    }
+    
+    main{
+        width: 65%;
+    }
+    aside{
+        width: 35%;
+        display: block;
+    }
+}
+@media  (min-width:1201px){
+    .container{
+        width: 1201px; 
+        flex-direction: row;  
+    }
+    
+    header .main-header{
+        font-size: 16px;
+        gap: 0px 20px;
+        justify-content: space-between;
+    }
+    nav .main-nav{
+        font-size:18px;
+        flex-wrap: nowrap;
+        padding: 5px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    main .maincontent{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    main .cards .CardButton img{
+        padding-left:7px ;
+    }
+}
