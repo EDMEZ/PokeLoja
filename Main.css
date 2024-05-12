@@ -225,7 +225,7 @@ BREAKPOINTS:
 
 /* @media -------------------------------------------------------  */
 
-@media (min-width:320px){
+@media (min-width:320px) and (max-width:480px) {
     .container{
         width: 100%; 
         flex-direction: column;  
@@ -275,10 +275,13 @@ BREAKPOINTS:
 
 }
 
-@media (min-width:481px){
+@media (min-width:481px) and (max-width:768px){
     .container{
         width: 100%; 
         flex-direction: column;  
+    }
+    main{
+        width: 100%;
     }
     
     header .main-header{
@@ -297,9 +300,12 @@ BREAKPOINTS:
     main .maincontent{
         grid-template-columns: 1fr 1fr;
     }
+    aside{
+        width: 100%;
+    }
 }
 
-@media (min-width:769px){
+@media (min-width:769px) and (max-width:1024px){
     .container{
         width: 769px; 
         flex-direction: row;  
@@ -339,7 +345,7 @@ BREAKPOINTS:
         text-align: center;
      }
 }
-@media (min-width:1025px){
+@media (min-width:1025px) and (max-width:1200px){
     .container{
         width: 1025px; 
         flex-direction: row;  
@@ -372,7 +378,7 @@ BREAKPOINTS:
         display: block;
     }
 }
-@media  (min-width:1201px){
+@media  (min-width:1201px) { 
     .container{
         width: 1201px; 
         flex-direction: row;  
