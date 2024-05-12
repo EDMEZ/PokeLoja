@@ -153,6 +153,11 @@ aside{
     width:25%;
     background-color: white;
 }
+aside .main-aside{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
 
 aside .poke-ads{
     display: block;
@@ -195,6 +200,34 @@ aside .poke-ads{
      justify-content: center;
      align-items: flex-end;
  }
+ aside .pokelist{
+    justify-content: center;
+    align-items: center;
+ }
+ aside .pokelist .titlelist{
+    border-bottom: #000 1px solid;
+ }
+ aside .pokelist .listitens img{
+    width: 30%;
+ }
+ 
+aside .pokelist .listitens{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: #000 1px solid;
+    gap: 20px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+aside .pokelist .listitens:hover{
+    background-color: #d3d3d3;
+    transition: 5s;
+}
+aside .pokelist .listitens .PokemonName{
+    width: 130px;
+    text-align: center;
+}
 
 footer {
     background-color: #000000;
