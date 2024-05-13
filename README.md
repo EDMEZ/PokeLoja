@@ -4,7 +4,7 @@
 
 ### Features
 - [X] Layout do site
-- [ ] Responsividade
+- [X] Responsividade
 - [ ] Funcionamento do site
 - [ ] Site estar no ar
 
