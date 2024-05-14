@@ -1,0 +1,7 @@
+@use 'cores';
+
+main{
+    .maincontent{
+        background-color: cores.$corprimaria;
+    }
+}
