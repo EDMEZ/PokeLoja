@@ -21,6 +21,9 @@ footer{
             .titlelist{
                 border-bottom:#fff 1px solid;
                 font-size: 10px;
+                h2{
+                    font-size: 18px;
+                }
             }
             .listitens{
                 display: flex;
@@ -38,9 +41,10 @@ footer{
                     width: 130px;
                     text-align: center;
                 }
-                h1{
+                h3{
                     font-size: 18px;
                 }
+                
                 
             }
             .listitens:hover{
