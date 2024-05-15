@@ -10,8 +10,8 @@
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), o site no momento esta funcionando apenas na maquina local.
-para ser possível acessa-lo será necessário instalar a pasta inteira.
+[Git](https://git-scm.com), o site no momento pode ser acessado pelo link: https://edmez.github.io/PokeLoja/ .
+também é possível baixar todo o projeto através da TAG.
 
 ### Importante
 o site é um projeto inicial, possiveis alterações virão,porém com o decorrer do curso
