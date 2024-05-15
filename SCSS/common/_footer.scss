@@ -1,3 +1,67 @@
 footer{
     background: #000;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        > div{
+            color: white;
+        }
+        .footercontent{
+            ul{
+                li{
+                    padding: 5px;
+                }
+            }
+        }
+        .pokelist{
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            
+            .titlelist{
+                border-bottom:#fff 1px solid;
+                font-size: 10px;
+            }
+            .listitens{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-bottom: #fff 1px solid;
+                gap: 20px;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                
+                img{
+                    width: 30%;
+                }
+                .PokemonName{
+                    width: 130px;
+                    text-align: center;
+                }
+                h1{
+                    font-size: 18px;
+                }
+                
+            }
+            .listitens:hover{
+                background-color: #808080;
+                transition: 5s;
+            }
+            #lastitem{
+                border :none;
+            }
+
+        }
+        .footersocial{
+            display: grid;
+            grid-column-start: 4;
+            justify-content: flex-end;
+            
+            .socialicons{
+                display: flex;
+                padding: 30px 10px;
+                gap: 10px;
+            }
+        }
+    }
 }

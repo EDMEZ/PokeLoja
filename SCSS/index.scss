@@ -130,9 +130,15 @@ main{
                 width: 90%;
             }
         }
-        
-        
     }
+    footer{
+        .container{
+            .pokelist{
+                display: none;
+                
+            }
+        }
+    }   
  }
  @media (min-width:481px) and (max-width:768px){
     .container{
@@ -186,6 +192,14 @@ main{
             }
         }
     }
+    footer{
+        .container{
+            .pokelist{
+                display: none;
+                
+            }
+        }
+    }   
 }
 @media (min-width:769px) and (max-width:1024px){
     .container{
@@ -231,6 +245,20 @@ main{
                     z-index: 1;
                     text-align: center;
                 } 
+            }
+        }
+    }
+    footer{
+        .container{
+            .pokelist{
+                h1{
+                    font-size: 12px;
+                }
+                .listitens{
+                    h1{
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }   
