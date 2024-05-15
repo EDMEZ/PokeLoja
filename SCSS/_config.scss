@@ -1,0 +1,21 @@
+$paddingMargin:0px;
+$fontfamily:Arial, Helvetica, sans-serif; 
+
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+body{
+    width: 100%;
+}
+.container{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+}

@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    display: flex;
+    background-color: orange;
+    
+    .main-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+    }
+    .headeritens{
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        gap: 20px;
+        
+
+        .inputgroup{
+            background-color: #fff;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            i{
+                width: 25px;
+                position: absolute;
+                right: 0;
+            }
+            input{
+                outline: none;
+                height: 100%;
+            }
+        }
+    }
+
+}

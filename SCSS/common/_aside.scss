@@ -1,0 +1,83 @@
+aside{
+    width: 25%;
+    background-color: #fff;
+
+    .main-aside{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .poke-ads{
+        display: block;
+        height: 250px;
+        background-image: url(../IMG/Mewto.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        margin:20px;
+        
+        .imgtext{
+            display: flex;
+            color: #fff;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            
+            h1{
+                color: #fff;
+                z-index: 1;
+                margin: 0px;
+                font-size: 50px;
+            }
+            p{
+                color: #fff;
+                z-index: 1;
+            }
+        }
+
+    }
+    .poke-ads::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left:0;
+        color:#fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .pokelist{
+        justify-content: center;
+        align-items: center;
+        
+        .titlelist{
+            border-bottom:#000 1px solid;
+        }
+        .listitens{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: #000 1px solid;
+            gap: 20px;
+            padding-bottom: 15px;
+            padding-top: 5px;
+            
+            img{
+                width: 30%;
+            }
+            .PokemonName{
+                width: 130px;
+                text-align: center;
+            }
+        }
+        .listitens:hover{
+            background-color: #d3d3d3;
+            transition: 5s;
+        }
+    }
+}
