@@ -277,13 +277,13 @@ footer{
         
         .maincontent{
             grid-template-columns: 1fr;
-            
+        
             :nth-child(n+5){
                 display: none;
             }
         }
         .CardButton{
-            display:flex;
+            display:flex!important;
             text-align: center;
             justify-content: center;
         }
@@ -293,14 +293,25 @@ footer{
         width: 100%;
         .main-aside{
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .poke-ads{
+                display: block;
+                background-image: url(../IMG/Mewto.jpg);
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+                width: 90%;
+            }
+            .pokelist{
+                width: 90%;
+            }
         }
-        .poke-ads{
-            display: block;
-            background-image: url(../IMG/Mewto.jpg);
-            background-size: cover;
-            background-position: center center;
-            position: relative;
-        }
+        
+        
     }
  }
  @media (min-width:481px) and (max-width:768px){
@@ -312,6 +323,10 @@ footer{
         width: 100%;
         .maincontent{
             grid-template-columns: 1fr 1fr;
+
+            :nth-child(1n+7){
+                display: none;
+            }
         }
     }
     
@@ -332,6 +347,24 @@ footer{
     }
     aside{
         width: 100%;
+        .main-aside{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .poke-ads{
+                display: block;
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+                width: 90%;
+            }
+            .pokelist{
+                width: 90%;
+            }
+        }
     }
 }
 @media (min-width:769px) and (max-width:1024px){

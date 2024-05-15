@@ -266,7 +266,7 @@ footer {
     display: none;
   }
   main .CardButton {
-    display: flex;
+    display: flex !important;
     text-align: center;
     justify-content: center;
   }
@@ -276,13 +276,21 @@ footer {
   }
   aside .main-aside {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  aside .poke-ads {
+  aside .main-aside .poke-ads {
     display: block;
     background-image: url(../IMG/Mewto.jpg);
     background-size: cover;
     background-position: center center;
     position: relative;
+    width: 90%;
+  }
+  aside .main-aside .pokelist {
+    width: 90%;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -295,6 +303,9 @@ footer {
   }
   main .maincontent {
     grid-template-columns: 1fr 1fr;
+  }
+  main .maincontent :nth-child(1n+7) {
+    display: none;
   }
   header .main-header {
     font-size: 12px;
@@ -311,6 +322,23 @@ footer {
   }
   aside {
     width: 100%;
+  }
+  aside .main-aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  aside .main-aside .poke-ads {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    width: 90%;
+  }
+  aside .main-aside .pokelist {
+    width: 90%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
