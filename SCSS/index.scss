@@ -5,86 +5,98 @@
 @use 'common/keyframes';
 @use 'config';
 
-main{
+main {
     width: 75%;
     background-color: #ffffff;
-
-    .maincontent{
+    
+    .maincontent {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         gap: 20px;
         margin: 20px;
     }
-    .cards{
+
+    .cards {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         border: 1px solid #d3d3d3;
-        
-        .PriceFrom{
+
+        .PriceFrom {
             color: #000;
             font-size: 16px;
             font-weight: 400;
         }
-        .PriceTo{
+
+        .PriceTo {
             color: limegreen;
             font-weight: 600;
             font-size: 18px;
         }
-        .CardButton{
+        h2{
+            text-align: center;
+        }
+        .CardButton {
             width: 90%;
-            background: linear-gradient(-45deg,#23a6d5,#23d5ab);;
+            background: linear-gradient(-45deg, #23a6d5, #23d5ab);
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             padding: 20px 0px;
-            margin-bottom:10px;
+            margin-bottom: 10px;
             border-radius: 10px;
 
-            a{
+            a {
                 text-decoration: none;
                 color: #fff;
                 font-weight: 600;
             }
-            img{
+
+            img {
                 position: absolute;
                 left: 0;
                 padding-left: 10px;
             }
         }
     }
-        .cards:hover{
-            background-color: #d3d3d3;
-            transition: 5s;
-        
-        .CardButton{
-                animation: BotaoCard 5s ease infinite;
-                background: linear-gradient(-45deg,#ee7252,#e73c7e,#23a6d5,#23d5ab) no-repeat;;
-                background-size: 400% 400%;
-                animation-fill-mode: forwards;
-            }
+
+    .cards:hover {
+        background-color: #d3d3d3;
+        transition: 5s;
+
+        .CardButton {
+            animation: BotaoCard 5s ease infinite;
+            background: linear-gradient(-45deg, #ee7252, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+            ;
+            background-size: 400% 400%;
+            animation-fill-mode: forwards;
         }
-    .cards > img{
+    }
+
+    .cards>img {
         max-width: 100%;
-    }    
+    }
 }
+
 @media (min-width:320px) and (max-width:480px) {
-    .container{
+    .container {
         width: 100%;
         flex-direction: column;
     }
-    header{
-        .main-header{
+
+    header {
+        .main-header {
             font-size: 12px;
             gap: 0px 20px;
             justify-content: space-evenly;
         }
     }
-    nav{
-        .main-nav{
+
+    nav {
+        .main-nav {
             font-size: 13px;
             flex-wrap: wrap;
             padding: 10px;
@@ -92,33 +104,36 @@ main{
             justify-content: space-evenly;
         }
     }
-    main{
-        width: 100%;
-        
-        .maincontent{
+
+    main {
+        width: 100%;        
+        .maincontent {
             grid-template-columns: 1fr;
-        
-            :nth-child(n+5){
+
+            :nth-child(n+5) {
                 display: none;
             }
         }
-        .CardButton{
-            display:flex!important;
+
+        .CardButton {
+            display: flex !important;
             text-align: center;
             justify-content: center;
         }
     }
-    aside{
+
+    aside {
         display: flex;
         width: 100%;
-        .main-aside{
+
+        .main-aside {
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
-            .poke-ads{
+
+            .poke-ads {
                 display: block;
                 background-image: url(../IMG/Mewto.jpg);
                 background-size: cover;
@@ -126,216 +141,243 @@ main{
                 position: relative;
                 width: 90%;
             }
-            .pokelist{
+
+            .pokelist {
                 width: 90%;
             }
         }
     }
-    footer{
-        .container{
-            .pokelist{
+
+    footer {
+        .container {
+            .pokelist {
                 display: none;
-                
+
             }
         }
-    }   
- }
- @media (min-width:481px) and (max-width:768px){
-    .container{
-        width: 100%; 
-        flex-direction: column;  
     }
-    main{
+}
+
+@media (min-width:481px) and (max-width:768px) {
+    .container {
         width: 100%;
-        .maincontent{
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+
+        .maincontent {
             grid-template-columns: 1fr 1fr;
 
-            :nth-child(1n+7){
+            :nth-child(1n+7) {
                 display: none;
             }
         }
     }
-    
+
     header {
-        .main-header{
-        font-size: 12px;
-        gap: 0px 20px;
-        justify-content: space-evenly;
-        padding: 5px;
+        .main-header {
+            font-size: 12px;
+            gap: 0px 20px;
+            justify-content: space-evenly;
+            padding: 5px;
         }
     }
-    nav .main-nav{
-        font-size:15px;
+
+    nav .main-nav {
+        font-size: 15px;
         flex-wrap: wrap;
         padding: 10px;
         gap: 5px;
         justify-content: space-evenly;
     }
-    aside{
+
+    aside {
         width: 100%;
-        .main-aside{
+
+        .main-aside {
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
-            .poke-ads{
+
+            .poke-ads {
                 display: block;
                 background-size: cover;
                 background-position: center center;
                 position: relative;
                 width: 90%;
             }
-            .pokelist{
+
+            .pokelist {
                 width: 90%;
             }
         }
     }
-    footer{
-        .container{
-            .pokelist{
+
+    footer {
+        .container {
+            .pokelist {
                 display: none;
-                
+
             }
         }
-    }   
-}
-@media (min-width:769px) and (max-width:1024px){
-    .container{
-        width: 769px; 
-        flex-direction: row;  
     }
-    
-    header .main-header{
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .container {
+        width: 769px;
+        flex-direction: row;
+    }
+
+    header .main-header {
         font-size: 16px;
         gap: 0px 20px;
         justify-content: space-between;
     }
-    nav .main-nav{
-        font-size:18px;
+
+    nav .main-nav {
+        font-size: 18px;
         flex-wrap: nowrap;
         padding: 5px;
         gap: 0;
         justify-content: space-between;
     }
-    
-     
-    main{
+
+
+    main {
         width: 65%;
-        .maincontent{
-            grid-template-columns: 1fr 1fr ;
-            
-            :nth-child(n+3){
+
+        .maincontent {
+            grid-template-columns: 1fr 1fr;
+
+            :nth-child(n+3) {
                 display: flex;
             }
 
-            :nth-child(n+7){
+            :nth-child(n+7) {
                 display: none;
             }
         }
     }
-    aside{
+
+    aside {
         width: 35%;
         display: block;
+
         .poke-ads {
             .imgtext {
-                p{
+                p {
                     color: white;
                     z-index: 1;
                     text-align: center;
-                } 
+                }
             }
         }
     }
-    footer{
-        .container{
-            .pokelist{
-                h2{
+
+    footer {
+        .container {
+            .pokelist {
+                h2 {
                     font-size: 12px;
                 }
-                .listitens{
-                    h3{
+
+                .listitens {
+                    h3 {
                         font-size: 12px;
                     }
                 }
             }
         }
-    }   
-}
-@media (min-width:1025px) and (max-width:1200px){
-    .container{
-        width: 1025px; 
-        flex-direction: row;  
     }
-    
+}
+
+@media (min-width:1025px) and (max-width:1200px) {
+    .container {
+        width: 1025px;
+        flex-direction: row;
+    }
+
     header {
-            .main-header{
+        .main-header {
             font-size: 16px;
             gap: 0px 20px;
             justify-content: space-between;
         }
     }
+
     nav {
-            .main-nav{
-            font-size:18px;
+        .main-nav {
+            font-size: 18px;
             flex-wrap: nowrap;
             padding: 5px;
             gap: 0;
             justify-content: space-between;
         }
     }
-    main {  
+
+    main {
         width: 65%;
-        
-        .maincontent{
-            grid-template-columns: 1fr 1fr 1fr ;
-            :nth-child(n+1){
+
+        .maincontent {
+            grid-template-columns: 1fr 1fr 1fr;
+
+            :nth-child(n+1) {
                 display: flex;
             }
         }
     }
-    
-    aside{
+
+    aside {
         width: 35%;
         display: block;
     }
 }
-@media  (min-width:1201px) { 
-    .container{
-        width: 1201px; 
-        flex-direction: row;  
+
+@media (min-width:1201px) {
+    .container {
+        width: 1201px;
+        flex-direction: row;
     }
-    
+
     header {
-            .main-header{
-                font-size: 16px;
-                gap: 0px 20px;
-                justify-content: space-between;
-            }
+        .main-header {
+            font-size: 16px;
+            gap: 0px 20px;
+            justify-content: space-between;
         }
+    }
+
     nav {
-        .main-nav{
-            font-size:18px;
+        .main-nav {
+            font-size: 18px;
             flex-wrap: nowrap;
             padding: 5px;
             gap: 0;
             justify-content: space-between;
-        }   
+        }
     }
-    main .maincontent{
+
+    main .maincontent {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    main .cards .CardButton img{
-        padding-left:7px ;
+
+    main .cards .CardButton img {
+        padding-left: 7px;
     }
-    main{
-        .maincontent{
+
+    main {
+        .maincontent {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
-        .cards{
-            .CardButton{
-                img{
+
+        .cards {
+            .CardButton {
+                img {
                     padding-left: 7px;
                 }
             }
