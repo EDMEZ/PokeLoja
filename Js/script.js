@@ -1,53 +1,76 @@
-class Pokemon{
-    constructor(nome,url){
-        this.nome = nome;
-        this.url = url; //https://pokeapi.co/api/v2/pokemon
-        this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/', '');  
-        this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
+let page = 0;
 
-        this.preco = Math.floor(Math.random() * 100);
-    }
-    html(){
-        const pokeDiv = document.createElement('div');
-        pokeDiv.className = 'cards';
-        pokeDiv.innerHTML = `
-        <img src="${this.imagem}" alt="${this.nome}">
-        <h2>${this.nome}</h2>
-        <p class="PriceFrom"><s>R$ ${this.preco}</s></p>
-        <p class="PriceTo">R$ ${(this.preco * 0.8).toFixed(2)}</p>
-        
-        <div class="CardButton">
-            <img src="IMG/pokebola.png" alt="LogoPokemon"></img>
-            <a href="#">Comprar</a>
-        </div>`;
-        return pokeDiv;
-    }
-    
-}
+async function getPokemons(page = 0){
+    const pokelist = document.querySelector('.maincontent');
+    pokelist.innerHTML = '<div>Carregando Pokemons...</div>';
+  
+    const limit = 20;
 
-async function GetPokemons(){
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=32');
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
     const json = await response.json();
+
+    const pages = Math.ceil(json.count / limit);
+    
+    window.scrollTo({top:0,behavior:'smooth'});
+    
     return json;
 }
 
+async function temAnterior (page){
+    const btnant = document.querySelector('.btn-ant');
 
+    if(page === 0){
+        btnant.style.visibility = 'hidden';
+    }
+    
+};
+
+function btnProx(){
+    const btnProx = document.querySelector('.btn-prox');
+    const btnant = document.querySelector('.btn-ant');
+
+    btnProx.onclick =  async() =>{
+        setTimeout(async() => {
+        const response = await getPokemons(page += 1);
+        listaPokemons(response.results);
+        btnant.style.visibility = 'visible';
+            
+        }, 500);
+    }
+};
+function btnAnt(){
+    const btnant = document.querySelector('.btn-ant');
+
+    btnant.onclick = async() =>{
+        setTimeout(async()=>{
+            const response = await getPokemons(page -= 1);
+            listaPokemons(response.results);
+        },500)
+    }
+}
+
+function listaPokemons(pokemonsApi){
+    const pokelist = document.querySelector('.maincontent');
+    pokelist.innerHTML = '';
+    const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name,pokemon.url));
+    
+    pokemons.forEach((pokemon) => {
+        const html = pokemon.html();
+        pokelist.appendChild(html);
+    })
+};
 
 
 //tudo sera executado apos a pagina carregar;
 window.onload = async () => {
-  const pokelist = document.querySelector('.maincontent');
+    setTimeout(async()=>{
+        const response = await getPokemons(page);
 
-  const response = await GetPokemons();
-  
-  const pokemons = response.results.map ((pokemon) => new Pokemon(pokemon.name,pokemon.url));
-
-       
-
-  pokemons.forEach((pokemon)=>{
-    const html = pokemon.html();
-    pokelist.appendChild(html)
-  })
+        listaPokemons(response.results);
+        btnProx();
+        btnAnt();
+        temAnterior(page);
+    },1)  
 }
 
