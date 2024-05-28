@@ -11,15 +11,18 @@ class Pokemon{
         const pokeDiv = document.createElement('div');
         pokeDiv.className = 'cards';
         pokeDiv.innerHTML = `
-        <img src="${this.imagem}" alt="${this.nome}">
-        <h2>${this.nome}</h2>
-        <p class="PriceFrom"><s>R$ ${this.preco}</s></p>
-        <p class="PriceTo">R$ ${(this.preco * 0.8).toFixed(2)}</p>
+        <a href="index2.html?id=${this.id}">
+            <img src="${this.imagem}" alt="${this.nome}" class="pokemons-image">
+            <h2>${this.nome}</h2>
+            <p class="PriceFrom"><s>R$ ${this.preco}</s></p>
+            <p class="PriceTo">R$ ${(this.preco * 0.8).toFixed(2)}</p>
+            
+            <div class="CardButton">
+                <img src="IMG/pokebola.png" alt="LogoPokemon"></img>
+                <a href="index2.html?id=${this.id}" class="linkbotaocomprar">Comprar</a>
+            </div>
+        </a>`;
         
-        <div class="CardButton">
-            <img src="IMG/pokebola.png" alt="LogoPokemon"></img>
-            <a href="#">Comprar</a>
-        </div>`;
         return pokeDiv;
     }
     

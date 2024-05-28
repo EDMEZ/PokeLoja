@@ -1,0 +1,11 @@
+@use 'common/header';
+@use 'common/nav';
+@use 'common/aside';
+@use 'common/footer';
+@use 'common/keyframes';
+@use 'config';
+@use 'common/carrinho';
+
+main{
+    width: 75%;
+}
