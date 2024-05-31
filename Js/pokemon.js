@@ -19,7 +19,7 @@ class Pokemon{
             
             <div class="CardButton">
                 <img src="IMG/pokebola.png" alt="LogoPokemon"></img>
-                <a href="index2.html?id=${this.id}" class="linkbotaocomprar">Comprar</a>
+                <a data-id="${this.id}"href="" class="linkbotaocomprar">Comprar</a>
             </div>
         </a>`;
         
@@ -27,3 +27,4 @@ class Pokemon{
     }
     
 }
+
